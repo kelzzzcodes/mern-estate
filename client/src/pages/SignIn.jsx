@@ -7,10 +7,11 @@ import {
   signInSuccess,
   signInFailure,
 } from '../redux/user/userSlice'
+import GoogleOAuth from '../components/GoogleOAuth'
 
 export default function SignIn() {
   const [formData, setFormData] = useState({})
-const {loading, error} = useSelector((state) => state.user)
+  const { loading, error } = useSelector((state) => state.user)
   const navigate = useNavigate()
   const dispatch = useDispatch()
   const handleChange = (e) => {
@@ -66,10 +67,11 @@ const {loading, error} = useSelector((state) => state.user)
         >
           {loading ? 'Loading...' : 'Sign In'}
         </button>
+        <GoogleOAuth />
       </form>
       <div className="flex gap-2 mt-5">
         <p>Don't have an account?</p>
-        <Link to={'/sign-upn'}>
+        <Link to={'/sign-up'}>
           <span className="text-blue-700">Sign up</span>
         </Link>
       </div>
