@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import GoogleOAuth from '../components/GoogleOAuth'
+import { GoogleOAuth } from '../components'
 
 export default function SignUp() {
   const [formData, setFormData] = useState({})
